@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BenchNine:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"/>
+    <title>TODO List!</title>
+</head>
+
+<body>
+    <form id="nameForm">
+        <div id="formInputs">
+            <label for="nameText">
+                <input class="center-text input" type="text" placeholder="What is your name?" name="nameText" id="nameTextInput">
+            </label>
+            <label for="color"><span class="tcp">Choose a color!</span>
+                <input type="color" name="color" id="titleColorPicker">
+            </label>
+            <label for="nameSubmit">
+                <button type="submit" class="input" name="nameSubmit">Make Your TODO List!</button>
+            </label>
+        </div>
+    </form>
+
+    <div id="app-container">
+        <div id="todo-app">
+            <h1 id="todoTitle">TODO LIST</h1>
+            <form id="todoForm" action="">
+                <p>
+                    <label for="userText">
+                        <input type="text" class="input" placeholder="Type your todo here." name="userText" id="todoTextInput">
+                    </label>
+                </p>
+
+                <p>
+                    <label for="color">
+                        <input type="color" name="color" id="colorPicker">
+                    </label>
+                </p>
+
+                <button type="submit" class="input">Add TODO list item</button>
+            </form>
+            <ul id="todos">
+
+            </ul>
+        </div>
+
+        <form id="reset">
+            <button type="submit" class="input-small">Delete this todo list and start over.</button>
+        </form>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
