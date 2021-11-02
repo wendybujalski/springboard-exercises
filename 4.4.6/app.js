@@ -25,6 +25,7 @@ function displayNameInput() {
 function displayTodoApp() {
     nameForm.style.display = "none";
     todoAppContainer.style.display = "block";
+    titleColor = localStorage.getItem("titleColor");
     todoTitle.innerText = username.toUpperCase() + "'S TODO LIST";
     todoTitle.style.color = titleColor;
     nameForm.style.display = "none";
@@ -106,8 +107,8 @@ nameForm.addEventListener("submit", function(event) {
     if(checkEmpty(nameTextInput, "You must enter a name!")) {
         username = un;
         localStorage.setItem("name", username);
-        localStorage.setItem("titleColor", titleColor);
         titleColor = titleColorInput.value;
+        localStorage.setItem("titleColor", titleColor);
         displayTodoApp();
     }
 });
