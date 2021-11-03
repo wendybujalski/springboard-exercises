@@ -1,0 +1,97 @@
+body {
+  text-align: center;
+  font-family: 'Zen Antique', serif;
+  background-image: url("bg.png");
+}
+
+h1 {
+  font-size: 3em;
+  line-height: 1em;
+  margin: 0.3em;
+}
+
+#container {
+  padding-left: 10px;
+  padding-right: 10px;
+  max-width: 1750px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(200, 20, 20);
+  border-radius: 1em;
+}
+
+#game {
+  padding-left: 10px;
+  padding-right: 10px;
+  max-width: 1750px;
+  margin: auto;
+  text-align: center;
+}
+
+#game div {
+  width: min(5.5vw, 11vh);
+  height: min(7.5vw, 15vh);
+  max-width: 120px;
+  max-height: 165px;
+  margin: min(0.5vw, 1vh, 12px);
+  display: inline-block;
+  color: white;
+  border-radius: 0.1em;
+}
+
+#game div .face {
+  margin: 0;
+  font-size: min(5vw, 10vh, 100px);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background-color: black;
+}
+
+@media (max-width: 470px) {
+  #game div {
+    margin: 2px;
+    width: 25px;
+    height: 35px;
+  }
+
+  #game div .face {
+    font-size: 22px;
+  }
+}
+
+.card {
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+}
+
+.flip {
+  transform: rotateY(180deg);
+}
+
+.card-front {
+  border: 2px solid black;
+  box-sizing: border-box;
+  transform: rotateY(180deg);
+}
+
+#game .gameButton {
+  background-color: black;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  padding: 0.5em;
+  font-size: 2em;
+  margin: 0.5em;
+  cursor: pointer;
+}
+
+#hud {
+  margin: 0.3em;
+}
