@@ -16,7 +16,7 @@ function myMap(arr, func) {
     return newArr;
 }
 
-function filter(arr, func) {
+function myFilter(arr, func) {
     let newArr = [];
 
     for(let i = 0; i < arr.length; i++) {
@@ -50,6 +50,6 @@ myForEach(myMap(colors, reverse), function(color, i){
     putOnPage(color.toUpperCase() + " at index " + i, "map");
 });
 
-myForEach(filter(colors, hasAnA), function(color, i){
+myForEach(myFilter(colors, hasAnA), function(color, i){
     putOnPage(color.toUpperCase() + " at index " + i, "filter");
 });
