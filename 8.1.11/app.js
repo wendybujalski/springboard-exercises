@@ -28,6 +28,42 @@ function myFilter(arr, func) {
     return newArr;
 }
 
+function mySum(arr, func) {
+    for(let i = 0; i < arr.length; i++) {
+        if(func(arr[i], i, arr)) {
+            return true;
+        }
+    }
+    return false;
+}
+
+function myEvery(arr, func) {
+    for(let i = 0; i < arr.length; i++) {
+        if(!func(arr[i], i, arr)) {
+            return false;
+        }
+    }
+    return true;
+}
+
+function myFind(arr, func) {
+    for(let i = 0; i < arr.length; i++) {
+        if(func(arr[i], i, arr) === true) {
+            return arr[i];
+        }
+    }
+    // return undefined is implied
+}
+
+function myFindIndex(arr, func) {
+    for(let i = 0; i < arr.length; i++) {
+        if(func(arr[i], i, arr) === true) {
+            return i;
+        }
+    }
+    return -1;
+}
+
 function reverse(text) {
     return text.toUpperCase().split("").reverse().join("");
 }
