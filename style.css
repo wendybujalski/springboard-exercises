@@ -18,3 +18,15 @@ li {
     font-size: 1em;
     line-height:2em;
 }
+
+a:visited {
+    color: rgb(150, 220, 255);
+}
+
+a:hover {
+    color: rgb(255, 0, 0);
+}
+
+a {
+    color: rgb(0, 0, 255);
+}
