@@ -4,8 +4,17 @@ body {
 
 h2 {
     font-size: 2em;
+    line-height:2em;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+}
+
+ul {
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
 }
 
 li {
     font-size: 1em;
+    line-height:2em;
 }
