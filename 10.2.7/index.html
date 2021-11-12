@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>let and const</title>
+</head>
+<body>
+    <a href="app.js">Click here to look at the refactored code.</a>
+
+    <ol>
+        <li>var is the original keyword for making variables, and let is the new one introduced in ES2015. A variable declared with var can be reassigned and redeclared, whilte variables declared with let can only be reassigned. Also, variables declared with var are hoisted and accessible anywhere in your code, while variables declared with let have block scope.</li>
+        <li>Variables declared with const cannot be redeclared or reassigned, unalike var, which can do both. Variables declared with const have block scope just like let, while var variables are hoisted.</li>
+        <li>let and const are very similar - the only difference is that variables declared with let can be reassigned, while those declared with const cannot be.</li>
+        <li>Hoisting is a behavior of the Javascript interpreter - variables declared with var and functions are "hoisted" to the top of the scope, so that they are initialized before any other code runs. That means you can invoke a var before it is assigned its first value. If you do so, you get undefined.</li>
+    </ol>
+
+    <script src="app.js"></script>
+</body>
+</html>
