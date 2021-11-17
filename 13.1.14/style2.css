@@ -1,0 +1,101 @@
+body {
+    background-color: black;
+    text-align: center;
+    font-family: 'Limelight', cursive;
+    color: white;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2em;
+    margin: 0.5em 0 0 0;
+}
+
+input {
+    font-family: 'Limelight', cursive;
+    text-align: center;
+    font-size: 2em;
+    width: 80%;
+    background-color: white;
+}
+
+button {
+    font-family: 'Limelight', cursive;
+    text-align: center;
+    font-size: 2em;
+    background-color: white;
+}
+
+button:hover {
+    background-color: red;
+}
+
+.movie {
+    width: fit-content;
+    margin: 2em auto;
+    border: 2px dashed white;
+    padding: 1em;
+}
+
+.rating {
+    color: red;
+    font-size: 60px;
+    margin: 0;
+}
+
+.remove-button {
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    margin-top: 0.5em;
+}
+
+/* All the CSS below here styles the star rating radio buttons */
+
+/* this positions the star-rating div and gives it a fixed size */
+#star-rating {
+    margin: auto;
+    width: 300px;
+    height: 90px;
+}
+
+/* this sets the size of the stars */
+#star-rating label {
+    font-size: 60px;
+}
+
+/* this moves the radio buttons offscreen */
+#star-rating:not(:checked) input {
+    position: absolute;
+    top: -1000px;
+}
+
+/* this styles the labels to hide the text */
+#star-rating:not(:checked) label {
+    color: #fff;
+    overflow: hidden;
+    white-space: nowrap;
+    float: right;
+    width: 1em;
+    cursor: pointer;
+}
+
+/* this inserts the start at the start of each label */
+#star-rating:not(:checked) label:before {
+    content: '★ ';
+}
+
+/* this styles the selected star and the ones before it to be red */
+#star-rating input:checked ~ label {
+    color: red;    
+}
+
+/* this styles the hovered star and stars before it to be red */
+#star-rating:not(:checked) label:hover,
+#star-rating:not(:checked) label:hover ~ label {
+    color: red;  
+}
