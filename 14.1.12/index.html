@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Part One</h1>
+    <ol>
+        <li>HTTP stands for Hypertext Transfer Protocol - it is a standard used for the transfer of data to and from servers.</li> 
+        <li>URL stands for Uniform Resource Locator - it is a human-readable address for a particular resource/website on the internet.</li>
+        <li>DNS stands for Domain Name System - it takes human-readable URLs and converts them to the appropriate IP addresses.</li>
+        <li>A query string is an extra string added to the end of a URL which adds additional query data to it in the form of key/value pairs.</li>
+        <li>GET is used to request data from a server without modifying anything. POST is used to send some data to the server to save/use.</li>
+        <li>An HTTP request is an individual request to a server from a client for something (HTML/CSS/etc) using the HTTP protocol.</li>
+        <li>An HTTP response is the response sent to the client from the server after an HTTP request is made. It might include the requested resource, an error code, or additional information.</li>
+        <li>An HTTP header is attached to every HTTP request/response and ccontains additional information about it. Examples include Host, Content-Type, Cache-Control, Accept, and more!</li>
+        <li>The browser converts the URL into an IP address using the DNS, then makes an HTTP request to that IP address including relevant header information. It then waits for the server to respond - if the response is successful (status code 200) then the browser generates a DOM from the given HTML and sends requests for any additional resources needed for that page. Finally it displays the page.</li>
+    </ol>
+    <h1>Part Two</h1>
+    <ol>
+        <li>curl https://icanhazdadjoke.com/search?term=pirate</li>
+        <li>dig https://icanhazdadjoke.com/</li>
+        <li>python3 -m http.server</li>
+    </ol>
+    <h1>Part Three</h1>
+        <form action="" method="post">
+            <input type="text" placeholder="test input 1" name="test1" id="test1">
+            <input type="text" placeholder="test input 2" name="test2" id="test2">
+            <button type="submit">Submit!</button>
+        </form>
+    <h1>Part Four</h1>
+    <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/URL">URL API</a></p>
+</body>
+</html>
