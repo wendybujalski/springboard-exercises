@@ -1,0 +1,13 @@
+body {
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+button {
+    font-style: italic;
+    font-weight: bold;
+}
