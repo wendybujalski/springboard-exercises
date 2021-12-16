@@ -17,8 +17,8 @@ def mode(nums):
     for num in nums:
         count[num] = count.get(num, 0) + 1
     
-    max = max(count.values())
+    maxi = max(count.values())
 
     for (n, c) in count.items():
-        if c == max:
+        if c == maxi:
             return n
