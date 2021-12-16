@@ -15,4 +15,4 @@ def extract_full_names(people):
         ['Ada Lovelace', 'Grace Hopper']
     """
 
-    return [f"{name["first"]} {name["last"]}" for name in people]
+    return [f"{name['first']} {name['last']}" for name in people]

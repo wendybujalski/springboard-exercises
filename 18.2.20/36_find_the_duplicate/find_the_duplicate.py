@@ -14,7 +14,7 @@ def find_the_duplicate(nums):
         True
     """
 
-    s = set(nums)
+    s = set()
 
     for n in nums:
         if n in s:
