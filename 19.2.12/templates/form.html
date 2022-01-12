@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}time to do some writing{% endblock %}
+
+{% block content %}
+    <h1>time to do some writing</h1>
+    <form action="/story">
+        <ol>
+            {% for prompt in story.prompts %}
+                <li><label for="{{prompt}}">{{prompt}}: </label><input name={{prompt}} placeholder={{prompt}} required></li>
+            {% endfor %}
+        </ol>
+        <input type="hidden" name="slug" value={{story.slug}}>
+        <button>Submit</button>
+    </form>
+
+{% endblock %}

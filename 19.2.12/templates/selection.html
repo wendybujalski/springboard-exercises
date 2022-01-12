@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}time to make a story{% endblock %}
+
+{% block content %}
+
+    <h1>time to make a story</h1>
+    <form action="/write">
+        <div>
+            <select id="template" name="template">
+                {% for story in stories.values() %}
+                    <option value="{{story.slug}}">{{story.title}}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div>
+            <button>Submit</button>
+        </div>
+    </form>
+
+{% endblock %}
