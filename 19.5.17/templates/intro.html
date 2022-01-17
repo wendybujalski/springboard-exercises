@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}Boggle!{% endblock %}
+
+{% block content %}
+    <div id="intro">
+        <h1>BOGGLE</h1>
+        <form class="start" method="POST" action="/start-game">
+            <div>
+                <label for="dice">Choose A Dice Set: </label>
+                <select name="dice">
+                    {% for key in boggle_game.DICE_MODES %}
+                    <option value="{{key}}">{{key}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div>
+                <label for="size">Choose A Board Size: </label>
+                <select name="size">
+                    {% for i in range(4, 9) %}
+                    <option value="{{i}}">{{i}} x {{i}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <button>Click Here To Play!</button>
+            {% if plays > 0 %}
+            <div>
+                <p>Games Played: {{plays}}</p>
+                <p>Highest Score: {{high_score}}</p>
+            </div>
+            {% endif %}
+        </form>
+    </div>
+    <script src="static/intro.js"></script>
+{% endblock %}

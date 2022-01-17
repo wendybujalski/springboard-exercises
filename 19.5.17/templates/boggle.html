@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Boggle!{% endblock %}
+
+{% block content %}
+    <div id="game">
+        <h1>BOGGLE</h1>
+        <div class="text-area"><span class="score"></span>&emsp;<span class="time"></span></div>
+        <table class="board">
+        {% for row in board %}
+            <tr>
+            {% for letter in row %}
+                <td class="letter">{{letter}}{% if letter == "Q" %}u{% endif %}</td>
+            {% endfor %}
+            </tr>
+        {% endfor %}
+        </table>
+        <form class="guess-form">
+            <input type="text" placeholder="enter your guess here" name="guess" required>    
+            <button>Submit Guess</button>
+        </form>
+        <div class="messages text-area"></div>
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.js"></script>
+    <script src="static/boggle.js"></script>
+{% endblock %}
